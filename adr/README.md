@@ -23,9 +23,9 @@ Each file holds one claim from the ADR, the build, the commands, and the log lin
 | Snapshot restore works under `only` | E25 |
 | On release branches a short token is refused at `token rotate` under `only` | E22 |
 | Upgrade every server with the mode off, then set `on` | E18 |
-| A server from an earlier release that reads the rewritten data fails with `illegal base64` | E19 |
+| Why the rewrite waits for every server: without the guard, a server from an earlier release that reads the rewritten data fails with `illegal base64` | E19 |
 | 1.34 to 1.37 apply the series | E21, E22 |
-| `Test_DockerFIPS` (7 specs) and `Test_DockerFIPSMigration` (8 specs) pass on the series and fail on stock | E26 |
+| First runs of `Test_DockerFIPS` and `Test_DockerFIPSMigration`, before the whole-series run in GATE | E26 |
 | Whole series on main and release-1.36: unit tests under off, `on`, `only`; three docker suites including the mixed-version guard; stock control; `token rotate` refusal | GATE |
 
 ## Claims with no log excerpt here
