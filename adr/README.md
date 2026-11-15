@@ -2,6 +2,8 @@
 
 Each file holds one claim from the ADR, the build, the commands, and the log lines that show the result, with the control's failing line where one exists. Lines are copied from the run logs; only machine identifiers are removed. The numbers in the file names are labels local to this pack.
 
+The ADR is proposed in https://github.com/k3s-io/k3s/pull/15000, for the intention issue https://github.com/k3s-io/k3s/issues/14984. The tag `adr-1` is the state the ADR and its pull requests link.
+
 ## How the runs were made
 
 - Test VMs on a public cloud, Ubuntu 24.04 and RHEL 10, each a cloud VM of a general-purpose class. The runs excerpted here are on Ubuntu 24.04; clusters ran in containers or as host processes under systemd.
