@@ -15,21 +15,25 @@ Rows follow the order the ADR states them.
 
 | ADR claim | File |
 |---|---|
+| Bootstrap keys derive with PBKDF2-SHA-1 (`pkg/cluster/encrypt.go:31,60`) and `only` stops on it: `crypto/pbkdf2: use of hash functions other than SHA-2 or SHA-3 is not allowed in FIPS 140-only mode` | E32 |
 | Node passwords hash with an 8-byte salt, and `only` stops on it: the servers panic on the short salt; deleting the secret regenerates a 16-byte salt | E14 |
 | Under `only`, a legacy node password returns an error naming the remedy, with no panic | E20 |
 | The websocket handshake's SHA-1 is fixed by the protocol: replacing it breaks the tunnel upgrade | E02, E07 |
 | etcd's member ID is SHA-1; embedded etcd needs the wrap | E03 |
 | The certificate fingerprint stays SHA-1 inside `WithoutEnforcement` | E02 |
+| Wrangler's object set hash stays SHA-1, inside `WithoutEnforcement` | E33 |
 | Under `on`, PostgreSQL, MySQL and MariaDB work | E05, E24 |
-| Under `on`, SQLite and embedded etcd work | E19, E03, E14 |
+| Under `on`, SQLite, embedded etcd and external etcd work | E19, E03, E14, E31 |
 | Under `on`, `wireguard-native` works; under `only` it stops on X25519 | E24 |
 | `only` does not cover PostgreSQL `md5`, MySQL `mysql_native_password` or MariaDB | E05, E24 |
+| `only` does not detect the `secretbox` provider | E34 |
 | Snapshot restore works under `only` | E25 |
 | `kubectl exec` works under `only` over SPDY fallback | E10, E25 |
 | An external NATS server works under `on` and `only`; the published binary does not include embedded NATS | E27 |
 | `host-gw` works under `on` and `only` | E28 |
 | Agentless servers work under `on` and `only` | E29 |
 | Upgrade every server with the mode off, then set `on` | E18 |
+| The bootstrap data rewrite waits until every control-plane node carries `k3s.io/bootstrap-sha256` and retries each minute | E35, E18, E19 |
 | A cluster that mixes releases stays on the legacy format; a server from an earlier release that reads the rewritten data fails with `illegal base64`; there is no downgrade past `on` without a backup | E19 |
 | The series applies to release-1.34 to 1.37 | E21, E22 |
 | K3s's build does not pass `GOFIPS140` through today | E30 |
@@ -39,10 +43,6 @@ Rows follow the order the ADR states them.
 ## Claims with no log excerpt here
 
 - runc fails the module's integrity check on `main`, so no pod starts: shown in the runc pull request, not in these logs.
-- Bootstrap keys derive with PBKDF2-SHA-1 and `only` stops on it: from code; no run here isolates that stop.
-- External etcd under `on` and the `secretbox` provider (which `only` does not detect): not run in this pack.
-- The bootstrap rewrite waits for the `k3s.io/bootstrap-sha256` annotation on every control-plane node and retries each minute: from code; E18 and E19 show the outcome.
-- Wrangler's object set hash stays SHA-1 and a wide wrap leaves `only` untested for the code it covers: from code and the Go documentation.
 - release-1.33 pins Go 1.25, which lacks `WithoutEnforcement`: from `go.mod` and the Go release notes.
 - SPDY is deprecated with no removal scheduled (KEP-4006): from the Kubernetes release notes.
 - Labels and fingerprints unchanged across modes, the bootstrap rewrite's compare-and-swap, and the call-site wrap locations: from code and from run summaries whose logs record lengths, not values.
