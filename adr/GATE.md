@@ -9,6 +9,8 @@ The whole series was applied to k3s main and to release-1.36 and run once on the
 | main with the series | fdf72b660e0555a0b7a6e6f4473e97c80f2c6a9e |
 | release-1.36 with the series | 264f5fd66bba6cea61d0ea5b19fd563207bac42c |
 
+The tested heads are on https://github.com/andrewdunndev/k3s, branch `fips-series-main` (fdf72b660e0555a0b7a6e6f4473e97c80f2c6a9e) and branch `fips-series-release-1.36` (264f5fd66bba6cea61d0ea5b19fd563207bac42c).
+
 The tips end in one test-only `go.mod replace` commit, which points wrangler, dynamiclistener and kube-router at their open fixes.
 
 | Check | Line | Result |
