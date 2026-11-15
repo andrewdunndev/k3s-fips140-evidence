@@ -35,8 +35,8 @@ Rows follow the order the ADR states them.
 | Agentless servers work under `on` and `only` | E29 |
 | Upgrade every server with the mode off, then set `on`: the recommended order, not a measured sequence. A cluster that only ran with the mode off is untouched by it (E19 cells e and g). E18 shows the stricter direct path, servers moving from stock straight to `on` one at a time, also holds quorum | E19, E18 |
 | The bootstrap data rewrite waits until every control-plane node carries `k3s.io/bootstrap-sha256` and retries each minute | E35, E18, E19 |
-| A cluster that mixes releases stays on the legacy format; a server from an earlier release that reads the rewritten data fails with `illegal base64`; there is no downgrade past `on` without a backup | E19 |
-| The series applies to release-1.34 to 1.37 | E21 |
+| A cluster that mixes releases stays on the legacy format; a server from an earlier release that reads the rewritten data fails with `illegal base64`; once `on` has rewritten the bootstrap data, an earlier release cannot read it, so a downgrade needs a backup taken before | E19 |
+| The series applies to `main`, release-1.36 and release-1.37, where it was tested; release-1.34 and 1.35 were not tested | GATE (main, release-1.36), E21 (release-1.37) |
 | On release branches a short token is refused at `token rotate` under `only` | E22, GATE |
 | K3s's build does not pass `GOFIPS140` through today; with the pass-through, the binary carries `GOFIPS140=v1.0.0-c2097c7c` and `DefaultGODEBUG=fips140=on`, so it runs under `on` from its first start with `GODEBUG` unset; a build without the variable is unchanged | E30 |
 | First runs of `Test_DockerFIPS` and `Test_DockerFIPSMigration` on the series, and stock failing `Test_DockerFIPS` under `only` at cluster setup | E26 |
