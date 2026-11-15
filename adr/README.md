@@ -38,7 +38,7 @@ Rows follow the order the ADR states them.
 | A cluster that mixes releases stays on the legacy format; a server from an earlier release that reads the rewritten data fails with `illegal base64`; once `on` has rewritten the bootstrap data, an earlier release cannot read it, so a downgrade needs a backup taken before | E19 |
 | The series applies to `main`, release-1.36 and release-1.37, where it was tested; release-1.34 and 1.35 were not tested | GATE (main, release-1.36), E21 (release-1.37) |
 | On release branches a short token is refused at `token rotate` under `only` | E22, GATE |
-| K3s's build does not pass `GOFIPS140` through today; with the pass-through, the binary carries `GOFIPS140=v1.0.0-c2097c7c` and `DefaultGODEBUG=fips140=on`, so it runs under `on` from its first start with `GODEBUG` unset; a build without the variable is unchanged | E30 |
+| K3s's build does not pass `GOFIPS140` through today; with the pass-through, the binary carries `GOFIPS140=v1.0.0-c2097c7c` and `DefaultGODEBUG=fips140=on`, so it runs under `on` from its first start with `GODEBUG` unset; a build without the variable is unchanged; with the series, that binary runs a pod, `kubectl exec` and a ClusterIP service with `GODEBUG` unset; on `main` its pods fail runc's integrity check; an arm64 build carries the same settings | E30 |
 | First runs of `Test_DockerFIPS` and `Test_DockerFIPSMigration` on the series, and stock failing `Test_DockerFIPS` under `only` at cluster setup | E26 |
 | With the series on main and release-1.36: unit tests under off, `on`, `only`; `Test_DockerFIPS` 7 of 7, `Test_DockerFIPSMigration` 8 of 8, `Test_DockerFIPSMixedVersion` 8 of 8; stock fails `Test_DockerFIPS` under `only` | GATE |
 
