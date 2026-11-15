@@ -132,4 +132,44 @@ crypto/internal/fips140/v1.0.0-c2097c7c/check.init.0()
 	build	GOFIPS140=v1.0.0-c2097c7c
 ```
 
-**Note.** The S0 node reaches Ready and its binaries carry the same three settings, runc included, so the commit's Makefile lines reach the bundled runc; the failure is runc's own integrity check, which the series addresses and `main` lacks. No fatal or panic line in either server log.
+**Note.** The S0 node reaches Ready and its bundled runc carries the same three settings, so the commit's Makefile lines reach runc; the failure is runc's own integrity check, which the series addresses and `main` lacks. Only runc's settings were captured for S0: the `go version -m` on the k3s binary failed on a docker socket error, so S0's k3s settings are not shown here (the same commit's k3s settings are in Round 8b, G1). No fatal or panic line in either server log.
+
+`make multiarch-binary`, build-arg echo
+
+```
+	--build-arg="GOFIPS140=v1.0.0" \
+```
+
+`make multiarch-binary`, linux/riscv64 link failure
+
+```
+ERROR: failed to build: failed to solve: process "/bin/sh -c if [ \"${TARGETOS}\" = \"linux\" ]; then GO=xx-go ./scripts/build; else ./scripts/build; fi" did not complete successfully: exit code: 1
+/usr/local/go/pkg/tool/linux_amd64/link: running riscv64-alpine-linux-musl-clang failed: exit status 1
+sqlite3_opt_preupdate_hook.cgo2.c:(.text+0x68): undefined reference to `sqlite3_preupdate_count'
+m1 rc=2
+```
+
+`control: linux/riscv64 alone, GOFIPS140 unset, same link failure`
+
+```
+sqlite3_opt_preupdate_hook.cgo2.c:(.text+0x68): undefined reference to `sqlite3_preupdate_count'
+sqlite3_opt_preupdate_hook.cgo2.c:(.text+0x128): undefined reference to `sqlite3_preupdate_depth'
+m3 rc=1
+```
+
+`hand-run docker buildx call, linux/amd64 and linux/arm64`
+
+```
+docker buildx build --platform "linux/amd64,linux/arm64" --build-arg "GIT_TAG=$GIT_TAG" --build-arg "TREE_STATE=$TREE_STATE" --build-arg "COMMIT=$COMMIT" --build-arg "DIRTY=$DIRTY" --build-arg="GOCOVER=" --build-arg="DEBUG=" --build-arg="GOFIPS140=v1.0.0" -f Dockerfile --target=multiarch-result --output type=local,dest=<out>
+m2 rc=0
+```
+
+`go version -m, arm64 build of that call (built, not run)`
+
+```
+/b/k3s-arm64: go1.26.10
+	build	-tags=urfave_cli_no_docs,fips140v1.0
+	build	DefaultGODEBUG=fips140=on
+	build	GOARCH=arm64
+	build	GOFIPS140=v1.0.0-c2097c7c
+```
