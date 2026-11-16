@@ -1,0 +1,62 @@
+time="2026-11-16T23:04:59Z" level=info msg="Acquiring lock file /var/lib/rancher/k3s/data/.lock"
+time="2026-11-16T23:04:59Z" level=info msg="Preparing data dir /var/lib/rancher/k3s/data/1717af6acdb9585d48d55e2e4d593c9b81e90044c78bb9f70217b47c6fac90dd"
+time="2026-11-16T23:05:01Z" level=info msg="Starting k3s v1.37.2+k3s- ()"
+time="2026-11-16T23:05:01Z" level=info msg="Configuring sqlite3 database connection pooling: maxIdle=20, maxOpen=0, maxLifetime=0s, maxIdleTime=2m0s"
+time="2026-11-16T23:05:01Z" level=info msg="Kine built with sqlite from github.com/mattn/go-sqlite3 version 3.53.4"
+time="2026-11-16T23:05:01Z" level=info msg="Configuring database table schema and indexes, this may take a moment..."
+time="2026-11-16T23:05:01Z" level=info msg="Database tables and indexes are up to date"
+time="2026-11-16T23:05:01Z" level=info msg="Running startup VACUUM to reclaim disk space, this may take a moment..."
+time="2026-11-16T23:05:01Z" level=info msg="Startup VACUUM completed successfully"
+time="2026-11-16T23:05:01Z" level=info msg="Kine available at unix://kine.sock"
+time="2026-11-16T23:05:01Z" level=info msg="Opening etcd client connection with endpoints [unix://kine.sock]"
+time="2026-11-16T23:05:01Z" level=info msg="Datastore connection validated successfully, proceeding with bootstrap data generation"
+time="2026-11-16T23:05:01Z" level=info msg="generated self-signed CA certificate CN=k3s-client-ca@1794870301: notBefore=2026-11-16 22:05:01.496821861 +0000 UTC notAfter=2036-11-13 22:05:01.496821861 +0000 UTC"
+time="2026-11-16T23:05:01Z" level=info msg="certificate CN=system:admin,O=system:masters signed by CN=k3s-client-ca@1794870301: notBefore=2026-11-16 22:05:01 +0000 UTC notAfter=2027-11-16 22:05:01 +0000 UTC"
+time="2026-11-16T23:05:01Z" level=info msg="certificate CN=system:k3s-supervisor,O=system:masters signed by CN=k3s-client-ca@1794870301: notBefore=2026-11-16 22:05:01 +0000 UTC notAfter=2027-11-16 22:05:01 +0000 UTC"
+time="2026-11-16T23:05:01Z" level=info msg="certificate CN=system:kube-controller-manager signed by CN=k3s-client-ca@1794870301: notBefore=2026-11-16 22:05:01 +0000 UTC notAfter=2027-11-16 22:05:01 +0000 UTC"
+time="2026-11-16T23:05:01Z" level=info msg="certificate CN=system:kube-scheduler signed by CN=k3s-client-ca@1794870301: notBefore=2026-11-16 22:05:01 +0000 UTC notAfter=2027-11-16 22:05:01 +0000 UTC"
+time="2026-11-16T23:05:01Z" level=info msg="certificate CN=system:apiserver,O=system:masters signed by CN=k3s-client-ca@1794870301: notBefore=2026-11-16 22:05:01 +0000 UTC notAfter=2027-11-16 22:05:01 +0000 UTC"
+time="2026-11-16T23:05:01Z" level=info msg="certificate CN=k3s-cloud-controller-manager signed by CN=k3s-client-ca@1794870301: notBefore=2026-11-16 22:05:01 +0000 UTC notAfter=2027-11-16 22:05:01 +0000 UTC"
+time="2026-11-16T23:05:01Z" level=info msg="generated self-signed CA certificate CN=k3s-server-ca@1794870301: notBefore=2026-11-16 22:05:01.501637436 +0000 UTC notAfter=2036-11-13 22:05:01.501637436 +0000 UTC"
+time="2026-11-16T23:05:01Z" level=info msg="certificate CN=kube-apiserver signed by CN=k3s-server-ca@1794870301: notBefore=2026-11-16 22:05:01 +0000 UTC notAfter=2027-11-16 22:05:01 +0000 UTC"
+time="2026-11-16T23:05:01Z" level=info msg="certificate CN=kube-scheduler signed by CN=k3s-server-ca@1794870301: notBefore=2026-11-16 22:05:01 +0000 UTC notAfter=2027-11-16 22:05:01 +0000 UTC"
+time="2026-11-16T23:05:01Z" level=info msg="certificate CN=kube-controller-manager signed by CN=k3s-server-ca@1794870301: notBefore=2026-11-16 22:05:01 +0000 UTC notAfter=2027-11-16 22:05:01 +0000 UTC"
+time="2026-11-16T23:05:01Z" level=info msg="generated self-signed CA certificate CN=k3s-request-header-ca@1794870301: notBefore=2026-11-16 22:05:01.504168213 +0000 UTC notAfter=2036-11-13 22:05:01.504168213 +0000 UTC"
+time="2026-11-16T23:05:01Z" level=info msg="certificate CN=system:auth-proxy signed by CN=k3s-request-header-ca@1794870301: notBefore=2026-11-16 22:05:01 +0000 UTC notAfter=2027-11-16 22:05:01 +0000 UTC"
+time="2026-11-16T23:05:01Z" level=info msg="generated self-signed CA certificate CN=etcd-server-ca@1794870301: notBefore=2026-11-16 22:05:01.505231923 +0000 UTC notAfter=2036-11-13 22:05:01.505231923 +0000 UTC"
+time="2026-11-16T23:05:01Z" level=info msg="certificate CN=etcd-client signed by CN=etcd-server-ca@1794870301: notBefore=2026-11-16 22:05:01 +0000 UTC notAfter=2027-11-16 22:05:01 +0000 UTC"
+time="2026-11-16T23:05:01Z" level=info msg="generated self-signed CA certificate CN=etcd-peer-ca@1794870301: notBefore=2026-11-16 22:05:01.50626256 +0000 UTC notAfter=2036-11-13 22:05:01.50626256 +0000 UTC"
+time="2026-11-16T23:05:01Z" level=info msg="certificate CN=etcd-peer signed by CN=etcd-peer-ca@1794870301: notBefore=2026-11-16 22:05:01 +0000 UTC notAfter=2027-11-16 22:05:01 +0000 UTC"
+time="2026-11-16T23:05:01Z" level=info msg="certificate CN=etcd-server signed by CN=etcd-server-ca@1794870301: notBefore=2026-11-16 22:05:01 +0000 UTC notAfter=2027-11-16 22:05:01 +0000 UTC"
+time="2026-11-16T23:05:01Z" level=info msg="Shutdown request received"
+time="2026-11-16T23:05:01Z" level=info msg="Waiting up to 2s for graceful shutdown of Kine GRPC server..."
+time="2026-11-16T23:05:01Z" level=info msg="Closing database connections..."
+time="2026-11-16T23:05:01Z" level=info msg="TTL events work queue has shut down"
+time="2026-11-16T23:05:01Z" level=info msg="certificate CN=k3s,O=k3s signed by CN=k3s-server-ca@1794870301: notBefore=2026-11-16 22:05:01 +0000 UTC notAfter=2027-11-16 22:05:01 +0000 UTC"
+panic: crypto/sha1: use of SHA-1 is not allowed in FIPS 140-only mode
+
+goroutine 409 [running]:
+crypto/sha1.Sum({0x3c4aef0c0000, 0x25f, 0x25f})
+	/usr/local/go/src/crypto/sha1/sha1.go:278 +0x145
+github.com/rancher/dynamiclistener/factory.(*TLS).generateCert(0x3c4aeebd6380, 0x3c4aef5fc280?, {0x3c4aef67e200, 0x16, 0x20})
+	/go/pkg/mod/github.com/rancher/dynamiclistener@v0.9.1-0.20260710234258-e4a1908ede0d/factory/gen.go:252 +0x475
+github.com/rancher/dynamiclistener/factory.(*TLS).AddCN(0x3c4aeebd6380, 0x3c4aef5fc280, {0x3c4aef67e000?, 0xb?, 0x743aa0?})
+	/go/pkg/mod/github.com/rancher/dynamiclistener@v0.9.1-0.20260710234258-e4a1908ede0d/factory/gen.go:201 +0x211
+github.com/rancher/dynamiclistener.(*listener).updateCert(0x3c4aefa06000, {0x3c4aef82a800?, 0x3c4aef603c08?, 0x7ef6a5e?})
+	/go/pkg/mod/github.com/rancher/dynamiclistener@v0.9.1-0.20260710234258-e4a1908ede0d/listener.go:421 +0x403
+github.com/rancher/dynamiclistener.(*listener).Accept.func1()
+	/go/pkg/mod/github.com/rancher/dynamiclistener@v0.9.1-0.20260710234258-e4a1908ede0d/listener.go:294 +0x45
+sync.(*Once).doSlow(0x90?, 0x3c4aeec20008?)
+	/usr/local/go/src/sync/once.go:78 +0xac
+sync.(*Once).Do(...)
+	/usr/local/go/src/sync/once.go:69
+github.com/rancher/dynamiclistener.(*listener).Accept(0x3c4aefa06000)
+	/go/pkg/mod/github.com/rancher/dynamiclistener@v0.9.1-0.20260710234258-e4a1908ede0d/listener.go:289 +0x58
+crypto/tls.(*listener).Accept(0x3c4aefa02390)
+	/usr/local/go/src/crypto/tls/tls.go:78 +0x24
+net/http.(*Server).Serve(0x3c4aef82a900, {0x252a490, 0x3c4aefa02390})
+	/usr/local/go/src/net/http/server.go:3454 +0x30c
+github.com/k3s-io/k3s/pkg/cluster.(*Cluster).initClusterAndHTTPS.func3()
+	/go/src/github.com/k3s-io/k3s/pkg/cluster/https.go:139 +0x25
+created by github.com/k3s-io/k3s/pkg/cluster.(*Cluster).initClusterAndHTTPS in goroutine 1
+	/go/src/github.com/k3s-io/k3s/pkg/cluster/https.go:138 +0x3af

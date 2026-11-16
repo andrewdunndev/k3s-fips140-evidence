@@ -1,0 +1,17 @@
+# go version -m on each binary, filtered to the build settings that show GOFIPS140. Go 1.26.10.
+# "make binary" run as GOFIPS140=v1.0.0 make binary in both trees.
+
+== k3s, series tip (fdf72b660e): no GOFIPS140, no fips140v1.0 tag, no DefaultGODEBUG
+	build	-buildmode=exe
+	build	-tags=urfave_cli_no_docs
+	build	CGO_ENABLED=0
+== k3s, stock base (c55a7df0fc49): no GOFIPS140, no fips140v1.0 tag, no DefaultGODEBUG
+	build	-buildmode=exe
+	build	-tags=urfave_cli_no_docs
+	build	CGO_ENABLED=0
+
+# The Docker migration test binary, built by `GOFIPS140=v1.0.0 go test`, does carry them:
+== docker test binary
+	build	-tags=fips140v1.0
+	build	DefaultGODEBUG=fips140=on
+	build	GOFIPS140=v1.0.0-c2097c7c

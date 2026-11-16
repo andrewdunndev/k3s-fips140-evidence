@@ -1,0 +1,72 @@
+diff --git a/tests/docker/fipsmigration/fipsmigration_test.go b/tests/docker/fipsmigration/fipsmigration_test.go
+index 342753f120..6d015514ca 100644
+--- a/tests/docker/fipsmigration/fipsmigration_test.go
++++ b/tests/docker/fipsmigration/fipsmigration_test.go
+@@ -34,6 +34,13 @@ func setMode(mode string) {
+ 		}
+ 		Expect(server.RunCmdOnNode(cmd)).Error().NotTo(HaveOccurred())
+ 	}
++	for _, agent := range tc.Agents {
++		cmd := "sed -i '/^GODEBUG=/d' /etc/systemd/system/k3s-agent.service.env"
++		if mode != "" {
++			cmd += "; echo 'GODEBUG=fips140=" + mode + "' >> /etc/systemd/system/k3s-agent.service.env"
++		}
++		Expect(agent.RunCmdOnNode(cmd)).Error().NotTo(HaveOccurred())
++	}
+ 	Expect(docker.RestartCluster(tc.Servers)).To(Succeed())
+ 	for _, agent := range tc.Agents {
+ 		Expect(agent.RunCmdOnNode("systemctl restart k3s-agent --no-block")).Error().NotTo(HaveOccurred())
+@@ -65,6 +72,16 @@ func processGODEBUG(node docker.DockerNode, unit string) (string, error) {
+ 	return node.RunCmdOnNode(`tr '\\0' '\\n' < /proc/\$(systemctl show -p MainPID --value ` + unit + `)/environ | grep ^GODEBUG=`)
+ }
+ 
++// expectMode checks that every k3s process, server and agent, runs with the given GODEBUG mode
++func expectMode(mode string) {
++	for _, server := range tc.Servers {
++		Expect(processGODEBUG(server, "k3s")).To(ContainSubstring("fips140=" + mode))
++	}
++	for _, agent := range tc.Agents {
++		Expect(processGODEBUG(agent, "k3s-agent")).To(ContainSubstring("fips140=" + mode))
++	}
++}
++
+ // legacyHash returns a node password hash as created before the salt was lengthened
+ func legacyHash(password string) string {
+ 	hasher := hash.NewSCrypt().(hash.SCrypt)
+@@ -117,6 +134,10 @@ var _ = Describe("FIPS Migration Tests", Ordered, func() {
+ 			Eventually(func() error {
+ 				return tests.NodesReady(tc.KubeconfigFile, tc.GetNodeNames())
+ 			}, "120s", "5s").Should(Succeed())
++			expectMode("on")
++			Eventually(func() (string, error) {
++				return tc.Servers[0].RunCmdOnNode("journalctl -u k3s --no-pager | grep -c 'migrated bootstrap key' || true")
++			}, "180s", "5s").ShouldNot(Equal("0\n"))
+ 		})
+ 	})
+ 
+@@ -131,9 +152,7 @@ var _ = Describe("FIPS Migration Tests", Ordered, func() {
+ 			}, "120s", "5s").Should(Succeed())
+ 		})
+ 		It("runs the server in the requested mode", func() {
+-			for _, server := range tc.Servers {
+-				Expect(processGODEBUG(server, "k3s")).To(ContainSubstring("fips140=only"))
+-			}
++			expectMode("only")
+ 		})
+ 		It("rejects the legacy node password with an error that names the remedy", func() {
+ 			Eventually(func() (string, error) {
+@@ -154,12 +173,14 @@ var _ = Describe("FIPS Migration Tests", Ordered, func() {
+ 			Eventually(func() error {
+ 				return tests.NodesReady(tc.KubeconfigFile, tc.GetNodeNames())
+ 			}, "180s", "5s").Should(Succeed())
++			expectMode("only")
+ 		})
+ 		It("stays joined after returning to fips140=on", func() {
+ 			setMode("on")
+ 			Eventually(func() error {
+ 				return tests.NodesReady(tc.KubeconfigFile, tc.GetNodeNames())
+ 			}, "180s", "5s").Should(Succeed())
++			expectMode("on")
+ 		})
+ 	})
+ })

@@ -1,0 +1,280 @@
+=== RUN   Test_IntegrationStartup
+Running Suite: Startup Suite - /home/user/w/tip/tests/integration/startup
+===============================================================================
+Random Seed: 1794869697
+
+Will run 60 of 60 specs
+------------------------------
+[BeforeSuite] 
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:23
+time="2026-11-16T22:54:57Z" level=info msg="waiting to get test lock"
+[BeforeSuite] PASSED [0.000 seconds]
+------------------------------
+startup tests when a default server is created is created with no arguments
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:34
+time="2026-11-16T22:54:57Z" level=info msg="Running \"../../../dist/artifacts/k3s server\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a default server is created has the default pods deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:39
+• [50.057 seconds]
+------------------------------
+startup tests when a default server is created has kine without tls
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:44
+• [0.000 seconds]
+------------------------------
+startup tests when a default server is created does not use kine with tls after bootstrap
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:56
+• [0.001 seconds]
+------------------------------
+startup tests when a default server is created dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:68
+• [0.388 seconds]
+------------------------------
+startup tests when a server with kine-tls is created is created with kine-tls
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:74
+time="2026-11-16T22:55:48Z" level=info msg="Running \"../../../dist/artifacts/k3s server --kine-tls\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with kine-tls is created has the default pods deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:80
+• [40.044 seconds]
+------------------------------
+startup tests when a server with kine-tls is created set kine to use tls
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:85
+• [0.000 seconds]
+------------------------------
+startup tests when a server with kine-tls is created dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:97
+• [0.365 seconds]
+------------------------------
+startup tests when a etcd backed server is created is created with cluster-init arguments
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:103
+time="2026-11-16T22:56:28Z" level=info msg="Running \"../../../dist/artifacts/k3s server --cluster-init\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a etcd backed server is created has the default pods deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:109
+• [55.068 seconds]
+------------------------------
+startup tests when a etcd backed server is created dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:114
+• [0.386 seconds]
+------------------------------
+startup tests when A server fails to start with bootstrap token Fails to start with a meaningful error
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:120
+time="2026-11-16T22:57:24Z" level=info msg="Running \"../../../dist/artifacts/k3s server --token aaaaaa.bbbbbbbbbbbbbbbb\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when A server fails to start with bootstrap token search for the error log
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:126
+• [2.000 seconds]
+------------------------------
+startup tests when A server fails to start with bootstrap token cleans up
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:138
+• [0.042 seconds]
+------------------------------
+startup tests when a server without traefik is created is created with disable arguments
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:144
+time="2026-11-16T22:57:26Z" level=info msg="Running \"../../../dist/artifacts/k3s server --disable traefik\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server without traefik is created has the default pods without traefik deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:150
+• [40.030 seconds]
+------------------------------
+startup tests when a server without traefik is created dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:158
+• [0.315 seconds]
+------------------------------
+startup tests when a server with different IPs is created creates dummy interfaces
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:164
+• [0.022 seconds]
+------------------------------
+startup tests when a server with different IPs is created is created with node-ip arguments
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:172
+time="2026-11-16T22:58:06Z" level=info msg="Running \"../../../dist/artifacts/k3s server --node-ip 11.22.33.44 --node-external-ip 55.66.77.88 --advertise-address 11.11.22.22\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with different IPs is created has the node deployed with correct IPs
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:182
+• [40.024 seconds]
+------------------------------
+startup tests when a server with different IPs is created get the kubectl and see if has the right advertise ip
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:201
+I1116 22:58:46.577028  156516 warnings.go:107] "Warning: v1 Endpoints is deprecated in v1.33+; use discovery.k8s.io/v1 EndpointSlice"
+• [0.003 seconds]
+------------------------------
+startup tests when a server with different IPs is created has the advertise ip in the apiserver serving cert SANs
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:206
+• [0.030 seconds]
+------------------------------
+startup tests when a server with different IPs is created dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:211
+• [0.416 seconds]
+------------------------------
+startup tests when a server with different data-dir is created creates a temp directory
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:221
+• [0.000 seconds]
+------------------------------
+startup tests when a server with different data-dir is created is created with data-dir flag
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:226
+time="2026-11-16T22:58:47Z" level=info msg="Running \"../../../dist/artifacts/k3s server --data-dir /tmp/k3s-data-dir568820972\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with different data-dir is created has the default pods deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:232
+• [40.051 seconds]
+------------------------------
+startup tests when a server with different data-dir is created has the correct files in the temp data-dir
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:240
+• [0.000 seconds]
+------------------------------
+startup tests when a server with different data-dir is created dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:248
+• [0.425 seconds]
+------------------------------
+startup tests when a server with different node options is created is created with node-name with-node-id, node-label and node-taint flags
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:254
+time="2026-11-16T22:59:27Z" level=info msg="Running \"../../../dist/artifacts/k3s server --node-name customnoder --with-node-id --node-label foo=bar --node-taint alice=bob:PreferNoSchedule\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with different node options is created has the default pods deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:260
+• [40.049 seconds]
+------------------------------
+startup tests when a server with different node options is created has a custom node name with id appended
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:269
+• [0.003 seconds]
+------------------------------
+startup tests when a server with different node options is created has proper node labels and taints
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:277
+• [0.000 seconds]
+------------------------------
+startup tests when a server with different node options is created dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:283
+• [0.372 seconds]
+------------------------------
+startup tests when a server with prefer-bundled-bin option is created with prefer-bundled-bin flag
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:289
+time="2026-11-16T23:00:07Z" level=info msg="Running \"../../../dist/artifacts/k3s server --prefer-bundled-bin\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with prefer-bundled-bin option has the default pods deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:295
+• [65.069 seconds]
+------------------------------
+startup tests when a server with prefer-bundled-bin option dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:303
+• [0.391 seconds]
+------------------------------
+startup tests when a server with a dummy pod is created with no arguments
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:311
+time="2026-11-16T23:01:13Z" level=info msg="Running \"../../../dist/artifacts/k3s server --prefer-bundled-bin\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with a dummy pod has the default pods deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:316
+• [40.042 seconds]
+------------------------------
+startup tests when a server with a dummy pod creates a new pod
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:321
+• [5.582 seconds]
+------------------------------
+startup tests when a server with a dummy pod restarts the server
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:328
+time="2026-11-16T23:02:09Z" level=info msg="Running \"../../../dist/artifacts/k3s server --prefer-bundled-bin\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [15.010 seconds]
+------------------------------
+startup tests when a server with a dummy pod has the dummy pod not restarted
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:337
+• [30.001 seconds]
+------------------------------
+startup tests when a server with a dummy pod dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:345
+• [0.385 seconds]
+------------------------------
+startup tests when a server with embedded etcd is created
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:353
+time="2026-11-16T23:02:44Z" level=info msg="Running \"../../../dist/artifacts/k3s server --cluster-init\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with embedded etcd has the default pods deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:359
+• [40.082 seconds]
+------------------------------
+startup tests when a server with embedded etcd has a server CA
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:364
+• [0.003 seconds]
+------------------------------
+startup tests when a server with embedded etcd restarts the server
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:369
+time="2026-11-16T23:03:34Z" level=info msg="Running \"../../../dist/artifacts/k3s server --cluster-init\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [20.064 seconds]
+------------------------------
+startup tests when a server with embedded etcd has the same server CA
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:380
+• [0.003 seconds]
+------------------------------
+startup tests when a server with embedded etcd dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:385
+• [0.349 seconds]
+------------------------------
+startup tests when a server with embedded etcd is created
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:392
+time="2026-11-16T23:03:44Z" level=info msg="Running \"../../../dist/artifacts/k3s server --cluster-init --token=goodtoken\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with embedded etcd has the default pods deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:398
+• [45.047 seconds]
+------------------------------
+startup tests when a server with embedded etcd fails to restart the server with invalid token
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:403
+time="2026-11-16T23:04:39Z" level=info msg="Running \"../../../dist/artifacts/k3s server --cluster-init --token=badtoken\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [10.003 seconds]
+------------------------------
+startup tests when a server with embedded etcd search for the error log
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:410
+• [2.001 seconds]
+------------------------------
+startup tests when a server with embedded etcd dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:422
+• [0.257 seconds]
+------------------------------
+startup tests when a server with datastore-endpoint and disable apiserver is created is created with datastore-endpoint and disable apiserver flags
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:428
+time="2026-11-16T23:04:42Z" level=info msg="Running \"../../../dist/artifacts/k3s server --datastore-endpoint test --disable-apiserver\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with datastore-endpoint and disable apiserver is created search for the error log
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:434
+• [2.000 seconds]
+------------------------------
+startup tests when a server with datastore-endpoint and disable apiserver is created cleans up
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:446
+• [0.041 seconds]
+------------------------------
+startup tests when a server with datastore-endpoint and disable etcd is created is created with datastore-endpoint and disable etcd flags
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:452
+time="2026-11-16T23:04:44Z" level=info msg="Running \"../../../dist/artifacts/k3s server --datastore-endpoint test --disable-etcd -s https://192.168.1.12:6443\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with datastore-endpoint and disable etcd is created search for the error log
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:458
+• [2.001 seconds]
+------------------------------
+startup tests when a server with datastore-endpoint and disable etcd is created cleans up
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:470
+• [0.039 seconds]
+------------------------------
+[AfterSuite] 
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:483
+[AfterSuite] PASSED [0.000 seconds]
+------------------------------
+
+Ran 60 of 60 Specs in 588.474 seconds
+SUCCESS! -- 60 Passed | 0 Failed | 0 Pending | 0 Skipped
+--- PASS: Test_IntegrationStartup (588.48s)
+PASS
+ok  	github.com/k3s-io/k3s/tests/integration/startup	588.564s

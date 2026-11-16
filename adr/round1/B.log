@@ -1,0 +1,475 @@
+go: downloading github.com/onsi/gomega v1.44.0
+go: downloading github.com/k3s-io/kubernetes/staging/src/k8s.io/api v1.37.2-k3s1
+go: downloading github.com/onsi/ginkgo/v2 v2.33.0
+go: downloading k8s.io/utils v0.0.0-20260626114624-be93311217bd
+go: downloading github.com/k3s-io/kubernetes/staging/src/k8s.io/apimachinery v1.37.2-k3s1
+go: downloading github.com/prometheus/client_golang v1.23.2
+go: downloading github.com/k3s-io/kubernetes/staging/src/k8s.io/client-go v1.37.2-k3s1
+go: downloading github.com/sirupsen/logrus v1.10.2
+go: downloading github.com/k3s-io/kubernetes/staging/src/k8s.io/apiserver v1.37.2-k3s1
+go: downloading github.com/k3s-io/api v0.2.1
+go: downloading github.com/k3s-io/kine v0.17.5
+go: downloading github.com/rancher/wharfie v0.7.1
+go: downloading github.com/rancher/lasso v0.2.9
+go: downloading github.com/rancher/remotedialer v0.6.0-rc.1.0.20250916111157-f160aa32568d
+go: downloading github.com/k3s-io/kubernetes/staging/src/k8s.io/component-base v1.37.2-k3s1
+go: downloading github.com/vishvananda/netlink v1.3.2-0.20260505210927-99e979749d3e
+go: downloading golang.org/x/sys v0.47.0
+go: downloading github.com/k3s-io/kubernetes/staging/src/k8s.io/cloud-provider v1.37.2-k3s1
+go: downloading sigs.k8s.io/yaml v1.6.0
+go: downloading github.com/prometheus/common v0.70.0
+go: downloading github.com/go-logr/logr v1.4.4
+go: downloading github.com/google/go-containerregistry v0.20.2
+go: downloading gopkg.in/yaml.v2 v2.4.0
+go: downloading github.com/golang/protobuf v1.5.4
+go: downloading github.com/k3s-io/etcd/api/v3 v3.7.1-k3s3
+go: downloading github.com/k3s-io/etcd/server/v3 v3.7.1-k3s3
+go: downloading google.golang.org/grpc v1.83.2
+go: downloading github.com/google/go-cmp v0.7.0
+go: downloading github.com/inetaf/tcpproxy v0.0.0-20260515195445-c159a6051109
+go: downloading github.com/mwitkow/go-http-dialer v0.0.0-20161116154839-378f744fb2b8
+go: downloading golang.org/x/net v0.60.0
+go: downloading github.com/beorn7/perks v1.0.1
+go: downloading github.com/cespare/xxhash/v2 v2.3.0
+go: downloading github.com/prometheus/client_model v0.6.3
+go: downloading github.com/prometheus/procfs v0.23.0
+go: downloading google.golang.org/protobuf v1.36.12
+go: downloading github.com/vishvananda/netns v0.0.5
+go: downloading github.com/evanphx/json-patch v5.9.11+incompatible
+go: downloading golang.org/x/sync v0.24.0
+go: downloading sigs.k8s.io/randfill v1.0.0
+go: downloading github.com/k3s-io/klog/v2 v2.140.0-k3s1
+go: downloading github.com/urfave/cli/v2 v2.27.7
+go: downloading github.com/k3s-io/kubernetes/staging/src/k8s.io/cluster-bootstrap v1.37.2-k3s1
+go: downloading go.yaml.in/yaml/v2 v2.4.4
+go: downloading github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822
+go: downloading k8s.io/kube-openapi v0.0.0-20260721132016-d427ff9ee9ad
+go: downloading sigs.k8s.io/structured-merge-diff/v6 v6.4.2
+go: downloading go.opentelemetry.io/otel v1.46.0
+go: downloading github.com/k3s-io/kubernetes/staging/src/k8s.io/streaming v1.37.2-k3s1
+go: downloading github.com/docker/cli v29.2.0+incompatible
+go: downloading github.com/mitchellh/go-homedir v1.1.0
+go: downloading github.com/opencontainers/go-digest v1.0.0
+go: downloading github.com/spf13/pflag v1.0.10
+go: downloading golang.org/x/term v0.47.0
+go: downloading github.com/Rican7/retry v0.3.1
+go: downloading github.com/google/uuid v1.6.0
+go: downloading github.com/tidwall/btree v1.8.2
+go: downloading github.com/go-sql-driver/mysql v1.10.1
+go: downloading github.com/jackc/pgerrcode v0.0.0-20240316143900-6e2875d9b438
+go: downloading github.com/jackc/pgx/v5 v5.12.0
+go: downloading modernc.org/sqlite v1.61.0
+go: downloading github.com/klauspost/compress v1.20.3
+go: downloading github.com/nats-io/jsm.go v0.5.1
+go: downloading github.com/nats-io/nats.go v1.55.0
+go: downloading github.com/t4db/t4 v1.1.16
+go: downloading github.com/shengdoushi/base58 v1.0.0
+go: downloading github.com/k3s-io/etcd/client/pkg/v3 v3.7.1-k3s3
+go: downloading github.com/k3s-io/etcd/client/v3 v3.7.1-k3s3
+go: downloading golang.org/x/time v0.16.0
+go: downloading go.yaml.in/yaml/v3 v3.0.5
+go: downloading github.com/coreos/go-systemd/v22 v22.7.0
+go: downloading github.com/emicklei/go-restful/v3 v3.13.0
+go: downloading golang.org/x/crypto v0.54.0
+go: downloading gopkg.in/evanphx/json-patch.v4 v4.13.0
+go: downloading go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.46.0
+go: downloading github.com/emicklei/go-restful v2.16.0+incompatible
+go: downloading go.opentelemetry.io/otel/metric v1.46.0
+go: downloading go.opentelemetry.io/otel/sdk v1.46.0
+go: downloading go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.46.0
+go: downloading gopkg.in/natefinch/lumberjack.v2 v2.2.1
+go: downloading github.com/blang/semver/v4 v4.0.0
+go: downloading go.opentelemetry.io/otel/trace v1.46.0
+go: downloading github.com/grpc-ecosystem/grpc-gateway/v2 v2.30.0
+go: downloading google.golang.org/genproto/googleapis/api v0.0.0-20260819154853-08b0e4226688
+go: downloading github.com/blang/semver v3.5.1+incompatible
+go: downloading github.com/Masterminds/semver/v3 v3.5.0
+go: downloading golang.org/x/text v0.43.0
+go: downloading sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730
+go: downloading github.com/google/gnostic-models v0.7.1
+go: downloading gopkg.in/inf.v0 v0.9.1
+go: downloading github.com/json-iterator/go v1.1.12
+go: downloading go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.71.0
+go: downloading github.com/soheilhy/cmux v0.1.5
+go: downloading github.com/tmc/grpc-websocket-proxy v0.0.0-20220101234140-673ab2c3ae75
+go: downloading go.etcd.io/bbolt v1.5.0
+go: downloading github.com/k3s-io/etcd/pkg/v3 v3.7.1-k3s3
+go: downloading go.uber.org/zap v1.28.0
+go: downloading go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.71.0
+go: downloading github.com/cpuguy83/go-md2man/v2 v2.0.7
+go: downloading github.com/xrash/smetrics v0.0.0-20250705151800-55b8f293f342
+go: downloading github.com/docker/distribution v2.8.3+incompatible
+go: downloading filippo.io/edwards25519 v1.2.0
+go: downloading github.com/jackc/pgpassfile v1.0.0
+go: downloading github.com/jackc/pgservicefile v0.0.0-20240606120523-5a60cdf6a761
+go: downloading google.golang.org/genproto/googleapis/rpc v0.0.0-20260825221802-da73d73af1c5
+go: downloading github.com/fxamacker/cbor/v2 v2.9.1
+go: downloading golang.org/x/oauth2 v0.37.0
+go: downloading github.com/nats-io/nats-server/v2 v2.15.2
+go: downloading github.com/nats-io/nkeys v0.4.16
+go: downloading github.com/nats-io/nuid v1.0.1
+go: downloading github.com/google/cel-go v0.29.2
+go: downloading github.com/fsnotify/fsnotify v1.10.1
+go: downloading sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.36.0
+go: downloading github.com/spf13/cobra v1.10.2
+go: downloading github.com/coreos/go-semver v0.3.1
+go: downloading github.com/NYTimes/gziphandler v1.1.1
+go: downloading github.com/go-openapi/swag v0.28.0
+go: downloading github.com/go-openapi/jsonreference v1.0.0
+go: downloading github.com/k3s-io/kubernetes/staging/src/k8s.io/kms v1.37.2-k3s1
+go: downloading github.com/grpc-ecosystem/go-grpc-middleware/providers/prometheus v1.1.0
+go: downloading golang.org/x/tools v0.52.0
+go: downloading github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2
+go: downloading go.opentelemetry.io/proto/otlp v1.11.0
+go: downloading github.com/gorilla/websocket v1.5.4-0.20250319132907-e064f32e3674
+go: downloading github.com/felixge/httpsnoop v1.1.0
+go: downloading github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
+go: downloading github.com/modern-go/reflect2 v1.0.3-0.20250322232337-35a7c28c31ee
+go: downloading github.com/dustin/go-humanize v1.1.0
+go: downloading go.etcd.io/raft/v3 v3.7.0
+go: downloading github.com/jonboulle/clockwork v0.5.0
+go: downloading github.com/xiang90/probing v0.0.0-20221125231312-a49e3df8f510
+go: downloading github.com/opencontainers/image-spec v1.1.1
+go: downloading github.com/containerd/stargz-snapshotter/estargz v0.18.2
+go: downloading github.com/russross/blackfriday/v2 v2.1.0
+go: downloading github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc
+go: downloading github.com/jackc/puddle/v2 v2.2.3
+go: downloading github.com/containerd/stargz-snapshotter v0.18.2
+go: downloading go.uber.org/multierr v1.11.0
+go: downloading github.com/x448/float16 v0.8.4
+go: downloading github.com/expr-lang/expr v1.17.8
+go: downloading gopkg.in/yaml.v3 v3.0.1
+go: downloading cel.dev/expr v0.25.2
+go: downloading github.com/docker/docker-credential-helpers v0.7.0
+go: downloading github.com/go-openapi/jsonpointer v1.0.0
+go: downloading github.com/go-openapi/swag/cmdutils v0.28.0
+go: downloading github.com/go-openapi/swag/conv v0.28.0
+go: downloading github.com/go-openapi/swag/fileutils v0.28.0
+go: downloading github.com/go-openapi/swag/jsonutils v0.28.0
+go: downloading github.com/go-openapi/swag/loading v0.28.0
+go: downloading github.com/go-openapi/swag/mangling v0.28.0
+go: downloading github.com/go-openapi/swag/netutils v0.28.0
+go: downloading github.com/go-openapi/swag/stringutils v0.28.0
+go: downloading github.com/go-openapi/swag/typeutils v0.28.0
+go: downloading github.com/go-openapi/swag/yamlutils v0.28.0
+go: downloading github.com/grpc-ecosystem/go-grpc-middleware/v2 v2.3.3
+go: downloading github.com/go-logr/stdr v1.2.3-0.20220714215716-96bad1d688c5
+go: downloading go.opentelemetry.io/auto/sdk v1.2.1
+go: downloading github.com/cenkalti/backoff/v5 v5.0.3
+go: downloading github.com/golang-jwt/jwt/v5 v5.3.1
+go: downloading github.com/antithesishq/antithesis-sdk-go v0.8.0
+go: downloading github.com/minio/highwayhash v1.0.4
+go: downloading github.com/nats-io/jwt/v2 v2.8.2
+go: downloading github.com/antlr4-go/antlr/v4 v4.13.1
+go: downloading github.com/minio/minio-go/v7 v7.3.0
+go: downloading github.com/cockroachdb/pebble v1.1.5
+go: downloading github.com/kylelemons/godebug v1.1.0
+go: downloading github.com/go-openapi/swag/pools v0.28.0
+go: downloading golang.org/x/exp v0.0.0-20261014143641-f0251eb4aa3e
+go: downloading github.com/vbatts/tar-split v0.12.2
+go: downloading gopkg.in/ini.v1 v1.67.3
+go: downloading github.com/minio/crc64nvme v1.1.1
+go: downloading github.com/klauspost/crc32 v1.3.0
+go: downloading github.com/minio/md5-simd v1.1.2
+go: downloading github.com/zeebo/xxh3 v1.1.0
+go: downloading github.com/tinylib/msgp v1.6.4
+go: downloading github.com/rs/xid v1.6.0
+go: downloading github.com/klauspost/cpuid/v2 v2.4.0
+go: downloading github.com/philhofer/fwd v1.2.0
+go: downloading golang.org/x/mod v0.42.0
+go: downloading github.com/cockroachdb/errors v1.11.3
+go: downloading github.com/cockroachdb/redact v1.1.5
+go: downloading github.com/cockroachdb/fifo v0.0.0-20240606204812-0bbfbd93a7ce
+go: downloading github.com/pkg/errors v0.9.1
+go: downloading github.com/cockroachdb/tokenbucket v0.0.0-20230807174530-cc333fc44b06
+go: downloading github.com/golang/snappy v0.0.5-0.20231225225746-43d5d4cd4e0e
+go: downloading github.com/cockroachdb/logtags v0.0.0-20230118201751-21c54148d20b
+go: downloading github.com/kr/pretty v0.3.1
+go: downloading github.com/gogo/protobuf v1.3.2
+go: downloading github.com/getsentry/sentry-go v0.27.0
+go: downloading github.com/rogpeppe/go-internal v1.14.1
+go: downloading github.com/kr/text v0.2.0
+go: downloading modernc.org/libc v1.79.0
+go: downloading modernc.org/memory v1.12.1
+go: downloading modernc.org/mathutil v1.7.1
+go: downloading github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec
+=== RUN   Test_IntegrationStartup
+Running Suite: Startup Suite - /home/user/w/tip/tests/integration/startup
+===============================================================================
+Random Seed: 1794869122
+
+Will run 60 of 60 specs
+------------------------------
+[BeforeSuite] 
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:23
+time="2026-11-16T22:45:22Z" level=info msg="waiting to get test lock"
+[BeforeSuite] PASSED [0.000 seconds]
+------------------------------
+startup tests when a default server is created is created with no arguments
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:34
+time="2026-11-16T22:45:22Z" level=info msg="Running \"../../../dist/artifacts/k3s server\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a default server is created has the default pods deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:39
+• [45.048 seconds]
+------------------------------
+startup tests when a default server is created has kine without tls
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:44
+• [0.000 seconds]
+------------------------------
+startup tests when a default server is created does not use kine with tls after bootstrap
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:56
+• [0.001 seconds]
+------------------------------
+startup tests when a default server is created dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:68
+• [0.391 seconds]
+------------------------------
+startup tests when a server with kine-tls is created is created with kine-tls
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:74
+time="2026-11-16T22:46:07Z" level=info msg="Running \"../../../dist/artifacts/k3s server --kine-tls\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with kine-tls is created has the default pods deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:80
+• [40.047 seconds]
+------------------------------
+startup tests when a server with kine-tls is created set kine to use tls
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:85
+• [0.000 seconds]
+------------------------------
+startup tests when a server with kine-tls is created dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:97
+• [0.359 seconds]
+------------------------------
+startup tests when a etcd backed server is created is created with cluster-init arguments
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:103
+time="2026-11-16T22:46:47Z" level=info msg="Running \"../../../dist/artifacts/k3s server --cluster-init\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a etcd backed server is created has the default pods deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:109
+• [55.057 seconds]
+------------------------------
+startup tests when a etcd backed server is created dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:114
+• [0.389 seconds]
+------------------------------
+startup tests when A server fails to start with bootstrap token Fails to start with a meaningful error
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:120
+time="2026-11-16T22:47:43Z" level=info msg="Running \"../../../dist/artifacts/k3s server --token aaaaaa.bbbbbbbbbbbbbbbb\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when A server fails to start with bootstrap token search for the error log
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:126
+• [2.001 seconds]
+------------------------------
+startup tests when A server fails to start with bootstrap token cleans up
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:138
+• [0.040 seconds]
+------------------------------
+startup tests when a server without traefik is created is created with disable arguments
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:144
+time="2026-11-16T22:47:45Z" level=info msg="Running \"../../../dist/artifacts/k3s server --disable traefik\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server without traefik is created has the default pods without traefik deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:150
+• [40.025 seconds]
+------------------------------
+startup tests when a server without traefik is created dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:158
+• [0.303 seconds]
+------------------------------
+startup tests when a server with different IPs is created creates dummy interfaces
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:164
+• [0.025 seconds]
+------------------------------
+startup tests when a server with different IPs is created is created with node-ip arguments
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:172
+time="2026-11-16T22:48:25Z" level=info msg="Running \"../../../dist/artifacts/k3s server --node-ip 11.22.33.44 --node-external-ip 55.66.77.88 --advertise-address 11.11.22.22\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with different IPs is created has the node deployed with correct IPs
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:182
+• [40.026 seconds]
+------------------------------
+startup tests when a server with different IPs is created get the kubectl and see if has the right advertise ip
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:201
+I1116 22:49:05.770254  126447 warnings.go:107] "Warning: v1 Endpoints is deprecated in v1.33+; use discovery.k8s.io/v1 EndpointSlice"
+• [0.003 seconds]
+------------------------------
+startup tests when a server with different IPs is created has the advertise ip in the apiserver serving cert SANs
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:206
+• [0.036 seconds]
+------------------------------
+startup tests when a server with different IPs is created dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:211
+• [0.393 seconds]
+------------------------------
+startup tests when a server with different data-dir is created creates a temp directory
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:221
+• [0.000 seconds]
+------------------------------
+startup tests when a server with different data-dir is created is created with data-dir flag
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:226
+time="2026-11-16T22:49:06Z" level=info msg="Running \"../../../dist/artifacts/k3s server --data-dir /tmp/k3s-data-dir3753664439\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with different data-dir is created has the default pods deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:232
+• [40.049 seconds]
+------------------------------
+startup tests when a server with different data-dir is created has the correct files in the temp data-dir
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:240
+• [0.000 seconds]
+------------------------------
+startup tests when a server with different data-dir is created dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:248
+• [0.356 seconds]
+------------------------------
+startup tests when a server with different node options is created is created with node-name with-node-id, node-label and node-taint flags
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:254
+time="2026-11-16T22:49:46Z" level=info msg="Running \"../../../dist/artifacts/k3s server --node-name customnoder --with-node-id --node-label foo=bar --node-taint alice=bob:PreferNoSchedule\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with different node options is created has the default pods deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:260
+• [40.047 seconds]
+------------------------------
+startup tests when a server with different node options is created has a custom node name with id appended
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:269
+• [0.003 seconds]
+------------------------------
+startup tests when a server with different node options is created has proper node labels and taints
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:277
+• [0.000 seconds]
+------------------------------
+startup tests when a server with different node options is created dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:283
+• [0.397 seconds]
+------------------------------
+startup tests when a server with prefer-bundled-bin option is created with prefer-bundled-bin flag
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:289
+time="2026-11-16T22:50:27Z" level=info msg="Running \"../../../dist/artifacts/k3s server --prefer-bundled-bin\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with prefer-bundled-bin option has the default pods deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:295
+• [40.243 seconds]
+------------------------------
+startup tests when a server with prefer-bundled-bin option dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:303
+• [0.364 seconds]
+------------------------------
+startup tests when a server with a dummy pod is created with no arguments
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:311
+time="2026-11-16T22:51:07Z" level=info msg="Running \"../../../dist/artifacts/k3s server --prefer-bundled-bin\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with a dummy pod has the default pods deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:316
+• [40.043 seconds]
+------------------------------
+startup tests when a server with a dummy pod creates a new pod
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:321
+• [5.466 seconds]
+------------------------------
+startup tests when a server with a dummy pod restarts the server
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:328
+time="2026-11-16T22:52:03Z" level=info msg="Running \"../../../dist/artifacts/k3s server --prefer-bundled-bin\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [15.010 seconds]
+------------------------------
+startup tests when a server with a dummy pod has the dummy pod not restarted
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:337
+• [30.000 seconds]
+------------------------------
+startup tests when a server with a dummy pod dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:345
+• [0.371 seconds]
+------------------------------
+startup tests when a server with embedded etcd is created
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:353
+time="2026-11-16T22:52:38Z" level=info msg="Running \"../../../dist/artifacts/k3s server --cluster-init\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with embedded etcd has the default pods deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:359
+• [45.043 seconds]
+------------------------------
+startup tests when a server with embedded etcd has a server CA
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:364
+• [0.003 seconds]
+------------------------------
+startup tests when a server with embedded etcd restarts the server
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:369
+time="2026-11-16T22:53:33Z" level=info msg="Running \"../../../dist/artifacts/k3s server --cluster-init\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [15.014 seconds]
+------------------------------
+startup tests when a server with embedded etcd has the same server CA
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:380
+• [0.003 seconds]
+------------------------------
+startup tests when a server with embedded etcd dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:385
+• [0.313 seconds]
+------------------------------
+startup tests when a server with embedded etcd is created
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:392
+time="2026-11-16T22:53:38Z" level=info msg="Running \"../../../dist/artifacts/k3s server --cluster-init --token=goodtoken\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with embedded etcd has the default pods deployed
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:398
+• [55.055 seconds]
+------------------------------
+startup tests when a server with embedded etcd fails to restart the server with invalid token
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:403
+time="2026-11-16T22:54:43Z" level=info msg="Running \"../../../dist/artifacts/k3s server --cluster-init --token=badtoken\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [10.003 seconds]
+------------------------------
+startup tests when a server with embedded etcd search for the error log
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:410
+• [2.001 seconds]
+------------------------------
+startup tests when a server with embedded etcd dies cleanly
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:422
+• [0.253 seconds]
+------------------------------
+startup tests when a server with datastore-endpoint and disable apiserver is created is created with datastore-endpoint and disable apiserver flags
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:428
+time="2026-11-16T22:54:46Z" level=info msg="Running \"../../../dist/artifacts/k3s server --datastore-endpoint test --disable-apiserver\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with datastore-endpoint and disable apiserver is created search for the error log
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:434
+• [2.001 seconds]
+------------------------------
+startup tests when a server with datastore-endpoint and disable apiserver is created cleans up
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:446
+• [0.038 seconds]
+------------------------------
+startup tests when a server with datastore-endpoint and disable etcd is created is created with datastore-endpoint and disable etcd flags
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:452
+time="2026-11-16T22:54:48Z" level=info msg="Running \"../../../dist/artifacts/k3s server --datastore-endpoint test --disable-etcd -s https://192.168.1.12:6443\" with stdout and stderr written to /home/user/w/tip/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a server with datastore-endpoint and disable etcd is created search for the error log
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:458
+• [2.001 seconds]
+------------------------------
+startup tests when a server with datastore-endpoint and disable etcd is created cleans up
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:470
+• [0.039 seconds]
+------------------------------
+[AfterSuite] 
+/home/user/w/tip/tests/integration/startup/startup_int_test.go:483
+[AfterSuite] PASSED [0.000 seconds]
+------------------------------
+
+Ran 60 of 60 Specs in 568.277 seconds
+SUCCESS! -- 60 Passed | 0 Failed | 0 Pending | 0 Skipped
+--- PASS: Test_IntegrationStartup (568.28s)
+PASS
+ok  	github.com/k3s-io/k3s/tests/integration/startup	568.336s

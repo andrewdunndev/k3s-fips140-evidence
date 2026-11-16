@@ -1,0 +1,13 @@
+=== RUN   Test_DockerFIPSMigration
+Running Suite: FIPS Migration Docker Test Suite - /home/user/w/tip/tests/docker/fipsmigration
+===================================================================================================
+Random Seed: 1794870688
+
+Will run 8 of 8 specs
+••••••••
+
+Ran 8 of 8 Specs in 151.478 seconds
+SUCCESS! -- 8 Passed | 0 Failed | 0 Pending | 0 Skipped
+--- PASS: Test_DockerFIPSMigration (151.48s)
+PASS
+ok  	github.com/k3s-io/k3s/tests/docker/fipsmigration	151.530s

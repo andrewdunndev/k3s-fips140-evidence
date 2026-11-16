@@ -1,0 +1,471 @@
+go: downloading github.com/rancher/wrangler/v3 v3.7.0
+go: downloading github.com/rancher/dynamiclistener v0.9.1-0.20260710234258-e4a1908ede0d
+=== RUN   Test_IntegrationStartup
+Running Suite: Startup Suite - /home/user/w/stock/tests/integration/startup
+=================================================================================
+Random Seed: 1794870299
+
+Will run 60 of 60 specs
+------------------------------
+[BeforeSuite] 
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:23
+time="2026-11-16T23:04:59Z" level=info msg="waiting to get test lock"
+[BeforeSuite] PASSED [0.000 seconds]
+------------------------------
+startup tests when a default server is created is created with no arguments
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:34
+time="2026-11-16T23:04:59Z" level=info msg="Running \"../../../dist/artifacts/k3s server\" with stdout and stderr written to /home/user/w/stock/tests/integration/startup/k3s-log.txt"
+• [0.001 seconds]
+------------------------------
+startup tests when a default server is created has the default pods deployed
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:39
+  [FAILED] in [It] - /home/user/w/stock/tests/integration/startup/startup_int_test.go:42 @ 11/16/26 23:06:59.884
+• [FAILED] [120.002 seconds]
+startup tests when a default server is created [It] has the default pods deployed
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:39
+
+  [FAILED] Timed out after 120.001s.
+  Expected success, but got an error:
+      <*url.Error | 0x221bbfc964e0>: 
+      Get "https://127.0.0.1:6443/apis/apps/v1/namespaces/kube-system/deployments": dial tcp 127.0.0.1:6443: connect: connection refused
+      {
+          Op: "Get",
+          URL: "https://127.0.0.1:6443/apis/apps/v1/namespaces/kube-system/deployments",
+          Err: <*net.OpError | 0x221bbfdc7540>{
+              Op: "dial",
+              Net: "tcp",
+              Source: nil,
+              Addr: <*net.TCPAddr | 0x221bbfc96480>{
+                  IP: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 127, 0, 0, 1],
+                  Port: 6443,
+                  Zone: "",
+              },
+              Err: <*os.SyscallError | 0x221bbfdc00c0>{
+                  Syscall: "connect",
+                  Err: <syscall.Errno>0x6f,
+              },
+          },
+      }
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:42 @ 11/16/26 23:06:59.884
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a default server is created [It] has kine without tls
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:44
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:44 @ 11/16/26 23:06:59.884
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a default server is created [It] does not use kine with tls after bootstrap
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:56
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:56 @ 11/16/26 23:06:59.885
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a default server is created [It] dies cleanly
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:68
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:68 @ 11/16/26 23:06:59.885
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with kine-tls is created [It] is created with kine-tls
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:74
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:74 @ 11/16/26 23:06:59.885
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with kine-tls is created [It] has the default pods deployed
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:80
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:80 @ 11/16/26 23:06:59.885
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with kine-tls is created [It] set kine to use tls
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:85
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:85 @ 11/16/26 23:06:59.885
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with kine-tls is created [It] dies cleanly
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:97
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:97 @ 11/16/26 23:06:59.885
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a etcd backed server is created [It] is created with cluster-init arguments
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:103
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:103 @ 11/16/26 23:06:59.885
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a etcd backed server is created [It] has the default pods deployed
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:109
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:109 @ 11/16/26 23:06:59.885
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a etcd backed server is created [It] dies cleanly
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:114
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:114 @ 11/16/26 23:06:59.885
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when A server fails to start with bootstrap token [It] Fails to start with a meaningful error
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:120
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:120 @ 11/16/26 23:06:59.885
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when A server fails to start with bootstrap token [It] search for the error log
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:126
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:126 @ 11/16/26 23:06:59.885
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when A server fails to start with bootstrap token [It] cleans up
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:138
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:138 @ 11/16/26 23:06:59.885
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server without traefik is created [It] is created with disable arguments
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:144
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:144 @ 11/16/26 23:06:59.885
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server without traefik is created [It] has the default pods without traefik deployed
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:150
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:150 @ 11/16/26 23:06:59.885
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server without traefik is created [It] dies cleanly
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:158
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:158 @ 11/16/26 23:06:59.885
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with different IPs is created [It] creates dummy interfaces
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:164
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:164 @ 11/16/26 23:06:59.885
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with different IPs is created [It] is created with node-ip arguments
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:172
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:172 @ 11/16/26 23:06:59.885
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with different IPs is created [It] has the node deployed with correct IPs
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:182
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:182 @ 11/16/26 23:06:59.886
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with different IPs is created [It] get the kubectl and see if has the right advertise ip
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:201
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:201 @ 11/16/26 23:06:59.886
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with different IPs is created [It] has the advertise ip in the apiserver serving cert SANs
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:206
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:206 @ 11/16/26 23:06:59.886
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with different IPs is created [It] dies cleanly
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:211
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:211 @ 11/16/26 23:06:59.886
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with different data-dir is created [It] creates a temp directory
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:221
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:221 @ 11/16/26 23:06:59.886
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with different data-dir is created [It] is created with data-dir flag
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:226
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:226 @ 11/16/26 23:06:59.886
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with different data-dir is created [It] has the default pods deployed
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:232
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:232 @ 11/16/26 23:06:59.886
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with different data-dir is created [It] has the correct files in the temp data-dir
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:240
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:240 @ 11/16/26 23:06:59.886
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with different data-dir is created [It] dies cleanly
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:248
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:248 @ 11/16/26 23:06:59.886
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with different node options is created [It] is created with node-name with-node-id, node-label and node-taint flags
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:254
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:254 @ 11/16/26 23:06:59.886
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with different node options is created [It] has the default pods deployed
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:260
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:260 @ 11/16/26 23:06:59.886
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with different node options is created [It] has a custom node name with id appended
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:269
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:269 @ 11/16/26 23:06:59.886
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with different node options is created [It] has proper node labels and taints
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:277
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:277 @ 11/16/26 23:06:59.886
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with different node options is created [It] dies cleanly
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:283
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:283 @ 11/16/26 23:06:59.886
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with prefer-bundled-bin option [It] is created with prefer-bundled-bin flag
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:289
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:289 @ 11/16/26 23:06:59.887
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with prefer-bundled-bin option [It] has the default pods deployed
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:295
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:295 @ 11/16/26 23:06:59.887
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with prefer-bundled-bin option [It] dies cleanly
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:303
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:303 @ 11/16/26 23:06:59.887
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with a dummy pod [It] is created with no arguments
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:311
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:311 @ 11/16/26 23:06:59.887
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with a dummy pod [It] has the default pods deployed
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:316
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:316 @ 11/16/26 23:06:59.887
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with a dummy pod [It] creates a new pod
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:321
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:321 @ 11/16/26 23:06:59.887
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with a dummy pod [It] restarts the server
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:328
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:328 @ 11/16/26 23:06:59.887
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with a dummy pod [It] has the dummy pod not restarted
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:337
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:337 @ 11/16/26 23:06:59.887
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with a dummy pod [It] dies cleanly
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:345
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:345 @ 11/16/26 23:06:59.887
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with embedded etcd [It] is created
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:353
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:353 @ 11/16/26 23:06:59.887
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with embedded etcd [It] has the default pods deployed
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:359
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:359 @ 11/16/26 23:06:59.887
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with embedded etcd [It] has a server CA
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:364
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:364 @ 11/16/26 23:06:59.887
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with embedded etcd [It] restarts the server
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:369
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:369 @ 11/16/26 23:06:59.887
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with embedded etcd [It] has the same server CA
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:380
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:380 @ 11/16/26 23:06:59.887
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with embedded etcd [It] dies cleanly
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:385
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:385 @ 11/16/26 23:06:59.887
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with embedded etcd [It] is created
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:392
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:392 @ 11/16/26 23:06:59.887
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with embedded etcd [It] has the default pods deployed
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:398
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:398 @ 11/16/26 23:06:59.888
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with embedded etcd [It] fails to restart the server with invalid token
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:403
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:403 @ 11/16/26 23:06:59.888
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with embedded etcd [It] search for the error log
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:410
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:410 @ 11/16/26 23:06:59.888
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with embedded etcd [It] dies cleanly
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:422
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:422 @ 11/16/26 23:06:59.888
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with datastore-endpoint and disable apiserver is created [It] is created with datastore-endpoint and disable apiserver flags
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:428
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:428 @ 11/16/26 23:06:59.888
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with datastore-endpoint and disable apiserver is created [It] search for the error log
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:434
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:434 @ 11/16/26 23:06:59.888
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with datastore-endpoint and disable apiserver is created [It] cleans up
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:446
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:446 @ 11/16/26 23:06:59.888
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with datastore-endpoint and disable etcd is created [It] is created with datastore-endpoint and disable etcd flags
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:452
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:452 @ 11/16/26 23:06:59.888
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with datastore-endpoint and disable etcd is created [It] search for the error log
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:458
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:458 @ 11/16/26 23:06:59.888
+------------------------------
+S [SKIPPED] [0.000 seconds]
+startup tests when a server with datastore-endpoint and disable etcd is created [It] cleans up
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:470
+
+  [SKIPPED] Spec skipped because an earlier spec in an ordered container failed
+  In [It] at: /home/user/w/stock/tests/integration/startup/startup_int_test.go:470 @ 11/16/26 23:06:59.888
+------------------------------
+[AfterSuite] 
+/home/user/w/stock/tests/integration/startup/startup_int_test.go:483
+[AfterSuite] PASSED [0.232 seconds]
+------------------------------
+
+Summarizing 1 Failure:
+  [FAIL] startup tests when a default server is created [It] has the default pods deployed
+  /home/user/w/stock/tests/integration/startup/startup_int_test.go:42
+
+Ran 2 of 60 Specs in 120.239 seconds
+FAIL! -- 1 Passed | 1 Failed | 0 Pending | 58 Skipped
+--- FAIL: Test_IntegrationStartup (120.24s)
+FAIL
+FAIL	github.com/k3s-io/k3s/tests/integration/startup	120.332s
+FAIL
