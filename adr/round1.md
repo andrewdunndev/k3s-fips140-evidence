@@ -1,6 +1,6 @@
 # Round 1: the startup test under `fips140=only`, and `Test_DockerFIPSMigration`
 
-**Claim.** On `main` with the series, the integration startup test passes under `GODEBUG=fips140=only` (60 of 60) and adds no measurable time. The same test on stock `main` fails at the first server start. `Test_DockerFIPSMigration` fails as it stands (it ran 4 of 8 specs, 3 passed, 1 failed) and passes 8 of 8 with two fixes: the agent's mode is set and checked after each change, and the test waits for the bootstrap rewrite before `only`.
+**Claim.** On `main` with the series, the integration startup test passes under `GODEBUG=fips140=only` (60 of 60). The same test on stock `main` fails at the first server start. `Test_DockerFIPSMigration` fails as it stands (it ran 4 of 8 specs, 3 passed, 1 failed) and passes 8 of 8 with two fixes: the agent's mode is set and checked after each change, and the test waits for the bootstrap rewrite before `only`.
 
 **Build.** An Ubuntu 24.04 cloud VM, Go 1.26.10, Docker 29.1.3, one run of each arm on 2026-11-16. The series tip is fdf72b660e, which is the ADR series plus a test-only `go.mod` replace that points at the unmerged library fixes. Stock is `main` at c55a7df0fc49. Both k3s binaries came from `GOFIPS140=v1.0.0 make binary`. That is a plain build: `make` does not pass `GOFIPS140` through (see [E30](E30-gofips140-build.md)), and `go version -m` shows no `GOFIPS140` setting, no `fips140v1.0` tag and no `DefaultGODEBUG` on either ([binary-buildinfo.txt](round1/binary-buildinfo.txt)). The integration test processes ran with `GOFIPS140` unset. Only the Docker test binary, compiled by `GOFIPS140=v1.0.0 go test`, carries it. Under `GODEBUG=fips140=only` the k3s server runs the Go release's module in enforcement mode, not a build pinned to the validated version.
 
@@ -25,7 +25,7 @@ The harness starts k3s without setting its environment, so the server inherits `
 | D0 | tip, migration test as it stands | Docker env sets the mode | FAIL, 4 of 8 ran, 3 passed, 1 failed | 162 s | [D0.log](round1/D0.log) |
 | D3 | tip, migration test with the fix | same | PASS, 8 of 8 | 157 s | [D3.log](round1/D3.log), [patch](round1/D3-fipsmigration-test.patch) |
 
-Wall time includes the `go test` compile. A ran 68 s faster than B here and 5 s faster on an earlier run the same day, so the difference is noise and the mode adds no measured time. The Docker migration test is under three minutes plus the binary build every Docker suite already pays.
+Wall time includes the `go test` compile. The suites' own times are 588 s for A and 568 s for B ("Ran 60 of 60 Specs in"). One run of each is within noise, so this page does not claim the mode adds or saves time. The Docker migration test is under three minutes plus the binary build every Docker suite already pays.
 
 **Arm C.** The first spec, `has the default pods deployed` (`startup_int_test.go:42`), times out at 120 s and the ordered suite skips the other 58. The server log ([C.k3s-log.txt](round1/C.k3s-log.txt), line 36):
 
@@ -47,4 +47,6 @@ An earlier run of the same code on the same tip passed 8 of 8, so the test depen
 
 **Arm D3.** The patch adds `expectMode(mode)`, which reads `GODEBUG` from `/proc/<pid>/environ` of the server (`k3s`) and the agent (`k3s-agent`) after `on`, `only`, the rejoin and the return to `on`. It writes the agent's env file in `setMode`, and waits up to 180 s for `migrated bootstrap key` in the server journal before leaving `on`. That wait is the assertion that the migration happened, and it closes the race.
 
-**Limits.** The environment variable shows the configured mode, not `fips140.Enabled()` inside the process. The runtime evidence is the named-remedy journal line under `only` and arm C's panic. The integration arms ran on a plain build, which is the CI default; a `GOFIPS140` build of the startup test was not run.
+**Other claims.** This page covers the startup test and the migration test. [`README.md`](README.md) is the index for the ADR's other claims (unit tests under off, `on` and `only`, the release-1.36 and release-1.37 runs, the token guard, the datastores and the rest), each filed under its own name.
+
+**Limits.** The environment variable shows the configured mode, not `fips140.Enabled()` inside the process. The runtime evidence is the named-remedy journal line under `only` and arm C's panic. The integration arms ran on a plain build, which is the CI default; a `GOFIPS140` build of the startup test was not run. The A logs do not themselves show that `GODEBUG` was in effect; the command does, and arm C's panic under the same command shows that the harness passes it through to the server.

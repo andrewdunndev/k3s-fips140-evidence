@@ -2,7 +2,7 @@
 
 Each file holds one claim from the ADR, the build, the commands, and the log lines that show the result, with the control's failing line where one exists. Lines are copied from the run logs; only machine identifiers are removed. The numbers in the file names are labels local to this pack.
 
-The ADR is proposed in https://github.com/k3s-io/k3s/pull/15000, for the intention issue https://github.com/k3s-io/k3s/issues/14984. The tag `adr-1` is the state the ADR and its pull requests link.
+The ADR is proposed in https://github.com/k3s-io/k3s/pull/15000, for the intention issue https://github.com/k3s-io/k3s/issues/14984. The tag `adr-1-r2` is the state the ADR and its pull requests link.
 
 ## How the runs were made
 
@@ -43,7 +43,8 @@ Rows follow the order the ADR states them.
 | On release branches a short token is refused at `token rotate` under `only` | E22, GATE |
 | K3s's build does not pass `GOFIPS140` through today; with the pass-through, the binary carries `GOFIPS140=v1.0.0-c2097c7c` and `DefaultGODEBUG=fips140=on`, so it runs under `on` from its first start with `GODEBUG` unset; a build without the variable is unchanged; with the series, that binary runs a pod, `kubectl exec` and a ClusterIP service with `GODEBUG` unset; on `main` its pods fail runc's integrity check; an arm64 build of the same `docker buildx` call carries the same settings | E30 |
 | First runs of `Test_DockerFIPS` and `Test_DockerFIPSMigration` on the series, and stock failing `Test_DockerFIPS` under `only` at cluster setup | E26 |
-| With the series on main and release-1.36: unit tests under off, `on`, `only`; `Test_DockerFIPS` 7 of 7, `Test_DockerFIPSMigration` 8 of 8, `Test_DockerFIPSMixedVersion` 8 of 8; stock fails `Test_DockerFIPS` under `only` | GATE |
+| With the series on main and release-1.36: unit tests under off, `on`, `only`; `Test_DockerFIPS` 7 of 7, `Test_DockerFIPSMigration` 8 of 8, `Test_DockerFIPSMixedVersion` 8 of 8; stock fails `Test_DockerFIPS` under `only` | GATE; as it stands `Test_DockerFIPSMigration` depends on timing (round1 arm D0), and passes 8 of 8 with the two fixes (round1 arm D3) |
+| The integration startup test passes under `only` on the series (60 of 60) and fails on stock at the first server start; `Test_DockerFIPSMigration` fails as it stands and passes 8 of 8 with the agent's mode set and checked and a wait for the bootstrap rewrite | round1 (`round1.md`) |
 
 ## Go documentation facts
 
